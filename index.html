@@ -1,7 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Joydeep Das' homepage">
+    <title>Joydeep Das</title>
+    <style>
+        body {
+            background-color: #e0f0ff; /* Light professional blue color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox to center the content vertically */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            color: #333; /* Dark text for better readability */
+        }
+
+        .header {
+            display: flex; /* Use flexbox to align items */
+            align-items: flex-end; /* Align items at the bottom */
+            margin-top: 50px; /* Margin for top spacing */
+        }
+
+        h1 {
+            font-size: 48px; /* Large font size */
+            color: white; /* White text color */
+            text-align: left; /* Align text to the left */
+            margin-right: 20px; /* Spacing between text and image */
+        }
+
+        .image-container {
+            position: relative; /* Positioning context for absolute child */
+        }
+
+        img {
+            width: 150px; /* Set a fixed width for the image */
+            height: auto; /* Auto height to maintain aspect ratio */
+            border-radius: 75px; /* Make image circular */
+            border: 3px solid white; /* White border around the image */
+            position: absolute; /* Position the image absolutely */
+            right: 0; /* Align to the right */
+            top: -40px; /* Move the image up */
+        }
+
+        .section {
+            background-color: white; /* White background for the sections */
+            padding: 20px; /* Padding around the text */
+            border-radius: 8px; /* Rounded corners */
+            max-width: 600px; /* Maximum width for the sections */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            margin-top: 20px; /* Space above each section */
+            position: relative; /* Position context for pseudo-elements */
+        }
+
+        .section::after {
+            content: ""; /* Create a pseudo-element for the dividing line */
+            display: block;
+            height: 4px; /* Thickness of the dividing line */
+            background-color: white; /* Color of the dividing line */
+            position: absolute;
+            bottom: -10px; /* Position below the section */
+            left: 0;
+            right: 0;
+        }
+
+        h2 {
+            margin-bottom: 15px; /* Space below headings */
+        }
+
+        p {
+            font-size: 18px; /* Font size for the paragraph */
+            line-height: 1.5; /* Line height for better readability */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+            text-align: left; /* Align list items to the left */
+        }
+
+        li {
+            font-size: 18px; /* Font size for list items */
+            margin: 5px 0; /* Spacing between list items */
+        }
+
+        .achievement-item {
+            margin: 20px 0; /* Spacing around achievement items */
+            text-align: left; /* Align text to the left */
+        }
+
+        .achievement-image {
+            width: 100%; /* Make images responsive */
+            max-width: 200px; /* Max width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 10px; /* Space below images */
+        }
+
+        .contact form {
+            display: flex; /* Use flexbox for the form */
+            flex-direction: column; /* Stack form fields vertically */
+            align-items: center; /* Center form fields */
+        }
+
+        .contact input {
+            margin: 10px 0; /* Margin around input fields */
+            padding: 10px; /* Padding inside input fields */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #ccc; /* Light gray border */
+            width: 80%; /* Width of the input fields */
+            max-width: 300px; /* Max width for larger screens */
+        }
+
+        .contact button {
+            padding: 10px 20px; /* Padding around button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #333; /* Dark background */
+            color: white; /* White text */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        .social-links {
+            margin-top: 15px; /* Space above links */
+        }
+
+        .social-links a {
+            color: #0077B5; /* LinkedIn blue color */
+            text-decoration: none; /* No underline on links */
+            margin: 0 10px; /* Space between links */
+        }
+
+        .social-links a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+    </style>
+</head>
 <body>
-<h1>Joydeep Das</h1>
-<p>A Public Access Space to check about Joydeep</p>
+
+    <div class="header"> <!-- Header section for name and image -->
+        <h1>Joydeep Das</h1> <!-- Name displayed in large font -->
+        <div class="image-container">
+            <img src="path-to-joydeep-image.jpg" alt="Joydeep Das"> <!-- Image of Joydeep -->
+        </div>
+    </div>
+
+    <div class="section about"> <!-- About section -->
+        <h2>About Joydeep</h2>
+        <p>
+            Joydeep Das is a passionate web developer with a flair for creating visually appealing and user-friendly websites.
+            With a background in computer science, Joydeep has honed his skills in front-end and back-end development, utilizing
+            modern technologies and frameworks. When not coding, Joydeep enjoys exploring nature and sharing knowledge with others.
+        </p>
+    </div>
+
+    <div class="section publications"> <!-- Publications section -->
+        <h2>Papers Published by Joydeep</h2>
+        <ul>
+            <li>Paper 1: Title of the first paper. <a href="link-to-paper1.com">Read More</a></li>
+            <li>Paper 2: Title of the second paper. <a href="link-to-paper2.com">Read More</a></li>
+            <li>Paper 3: Title of the third paper. <a href="link-to-paper3.com">Read More</a></li>
+            <li>Paper 4: Title of the fourth paper. <a href="link-to-paper4.com">Read More</a></li>
+        </ul>
+    </div>
+
+    <div class="section achievements"> <!-- Achievements section -->
+        <h2>Achievements</h2>
+        <div class="achievement-item">
+            <img src="path-to-achievement-image1.jpg" alt="Achievement 1" class="achievement-image"> <!-- Image of Achievement -->
+            <p>Achievement 1: Description of the first achievement. <a href="link-to-pdf1.pdf">View PDF</a></p>
+        </div>
+        <div class="achievement-item">
+            <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image"> <!-- Image of Achievement -->
+            <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">View PDF</a></p>
+        </div>
+        <div class="achievement-item">
+            <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image"> <!-- Image of Achievement -->
+            <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">View PDF</a></p>
+        </div>
+    </div>
+
+    <div class="section contact"> <!-- Contact section -->
+        <h2>Contact Joydeep</h2>
+        <form>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <h3>Connect with Joydeep:</h3>
+            <!-- LinkedIn Profile Link -->
+            <a href="https://www.linkedin.com/in/joydeep-das" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
 </body>
 </html>
