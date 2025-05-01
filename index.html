@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,147 +8,179 @@
     <title>Joydeep Das</title>
     <style>
         body {
-            background-color: #e0f0ff; /* Light professional blue color */
+            background-color: #001f3f; /* Dark blue color */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex; /* Use flexbox to center the content vertically */
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            color: #333; /* Dark text for better readability */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            color: white;
+        }
+
+        nav {
+            background-color: #003366; /* Darker blue for nav */
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white; /* White text for nav links */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
 
         .header {
-            display: flex; /* Use flexbox to align items */
-            align-items: flex-end; /* Align items at the bottom */
-            margin-top: 50px; /* Margin for top spacing */
+            display: flex;
+            align-items: flex-end;
+            margin-top: 50px;
         }
 
         h1 {
-            font-size: 48px; /* Large font size */
-            color: white; /* White text color */
-            text-align: left; /* Align text to the left */
-            margin-right: 20px; /* Spacing between text and image */
+            font-size: 48px;
+            margin-right: 20px;
         }
 
         .image-container {
-            position: relative; /* Positioning context for absolute child */
+            position: relative;
         }
 
         img {
-            width: 150px; /* Set a fixed width for the image */
-            height: auto; /* Auto height to maintain aspect ratio */
-            border-radius: 75px; /* Make image circular */
-            border: 3px solid white; /* White border around the image */
-            position: absolute; /* Position the image absolutely */
-            right: 0; /* Align to the right */
-            top: -40px; /* Move the image up */
+            width: 150px;
+            height: auto;
+            border-radius: 75px;
+            border: 3px solid white;
+            position: absolute;
+            right: 0;
+            top: -40px;
         }
 
         .section {
-            background-color: white; /* White background for the sections */
-            padding: 20px; /* Padding around the text */
-            border-radius: 8px; /* Rounded corners */
-            max-width: 600px; /* Maximum width for the sections */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            margin-top: 20px; /* Space above each section */
-            position: relative; /* Position context for pseudo-elements */
+            padding: 20px;
+            max-width: 600px;
+            margin-top: 20px;
+            width: 100%; /* Full width */
+            position: relative;
         }
 
         .section::after {
-            content: ""; /* Create a pseudo-element for the dividing line */
+            content: "";
             display: block;
-            height: 4px; /* Thickness of the dividing line */
-            background-color: white; /* Color of the dividing line */
+            height: 4px;
+            background-color: white;
             position: absolute;
-            bottom: -10px; /* Position below the section */
+            bottom: -10px;
             left: 0;
             right: 0;
+            width: 100%; /* Full width of separator */
         }
 
         h2 {
-            margin-bottom: 15px; /* Space below headings */
+            margin-bottom: 15px;
+            text-align: left; /* Left align headings */
         }
 
         p {
-            font-size: 18px; /* Font size for the paragraph */
-            line-height: 1.5; /* Line height for better readability */
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: left; /* Left align paragraphs */
         }
 
         ul {
-            list-style-type: none; /* Remove default list styling */
-            padding: 0; /* Remove default padding */
-            text-align: left; /* Align list items to the left */
+            list-style-type: none;
+            padding: 0;
+            text-align: left; /* Left align list items */
         }
 
         li {
-            font-size: 18px; /* Font size for list items */
-            margin: 5px 0; /* Spacing between list items */
+            font-size: 18px;
+            margin: 5px 0;
         }
 
         .achievement-item {
-            margin: 20px 0; /* Spacing around achievement items */
-            text-align: left; /* Align text to the left */
+            margin: 20px 0;
+            text-align: left; /* Left align achievement items */
         }
 
         .achievement-image {
-            width: 100%; /* Make images responsive */
-            max-width: 200px; /* Max width for the image */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 5px; /* Rounded corners */
-            margin-bottom: 10px; /* Space below images */
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
         .contact form {
-            display: flex; /* Use flexbox for the form */
-            flex-direction: column; /* Stack form fields vertically */
-            align-items: center; /* Center form fields */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align form fields to the left */
         }
 
         .contact input {
-            margin: 10px 0; /* Margin around input fields */
-            padding: 10px; /* Padding inside input fields */
-            border-radius: 5px; /* Rounded corners */
-            border: 1px solid #ccc; /* Light gray border */
-            width: 80%; /* Width of the input fields */
-            max-width: 300px; /* Max width for larger screens */
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 300px;
         }
 
         .contact button {
-            padding: 10px 20px; /* Padding around button */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #333; /* Dark background */
-            color: white; /* White text */
-            cursor: pointer; /* Pointer cursor on hover */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
         }
 
         .social-links {
-            margin-top: 15px; /* Space above links */
+            margin-top: 15px;
         }
 
         .social-links a {
             color: #0077B5; /* LinkedIn blue color */
-            text-decoration: none; /* No underline on links */
-            margin: 0 10px; /* Space between links */
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         .social-links a:hover {
             text-decoration: underline; /* Underline on hover */
         }
 
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #003366; /* Footer background */
+            color: white;
+            width: 100%;
+            text-align: center; /* Center aligned footer text */
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="header"> <!-- Header section for name and image -->
-        <h1>Joydeep Das</h1> <!-- Name displayed in large font -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header">
+        <h1>Joydeep Das</h1>
         <div class="image-container">
-            <img src="path-to-joydeep-image.jpg" alt="Joydeep Das"> <!-- Image of Joydeep -->
+            <img src="/joydeep.github.io/docs/assets/Joydeep_Das.jpeg" alt="Joydeep Das">
         </div>
     </div>
 
-    <div class="section about"> <!-- About section -->
+    <div class="section about" id="about">
         <h2>About Joydeep</h2>
         <p>
             Joydeep Das is a passionate web developer with a flair for creating visually appealing and user-friendly websites.
@@ -156,7 +189,7 @@
         </p>
     </div>
 
-    <div class="section publications"> <!-- Publications section -->
+    <div class="section publications" id="publications">
         <h2>Papers Published by Joydeep</h2>
         <ul>
             <li>Paper 1: Title of the first paper. <a href="link-to-paper1.com">Read More</a></li>
@@ -166,23 +199,23 @@
         </ul>
     </div>
 
-    <div class="section achievements"> <!-- Achievements section -->
+    <div class="section achievements" id="achievements">
         <h2>Achievements</h2>
         <div class="achievement-item">
-            <img src="path-to-achievement-image1.jpg" alt="Achievement 1" class="achievement-image"> <!-- Image of Achievement -->
+            <img src="path-to-achievement-image1.jpg" alt="Achievement 1" class="achievement-image">
             <p>Achievement 1: Description of the first achievement. <a href="link-to-pdf1.pdf">View PDF</a></p>
         </div>
         <div class="achievement-item">
-            <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image"> <!-- Image of Achievement -->
+            <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image">
             <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">View PDF</a></p>
         </div>
         <div class="achievement-item">
-            <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image"> <!-- Image of Achievement -->
+            <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image">
             <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">View PDF</a></p>
         </div>
     </div>
 
-    <div class="section contact"> <!-- Contact section -->
+    <div class="section contact" id="contact">
         <h2>Contact Joydeep</h2>
         <form>
             <input type="email" placeholder="Your Email" required>
@@ -190,10 +223,15 @@
         </form>
         <div class="social-links">
             <h3>Connect with Joydeep:</h3>
-            <!-- LinkedIn Profile Link -->
             <a href="https://www.linkedin.com/in/joydeep-das" target="_blank">LinkedIn</a>
         </div>
     </div>
 
+    <footer>
+        <p>© 2023 Joydeep Das. All rights reserved.</p>
+        <p>Contact: <a href="mailto:joydeep@example.com" style="color: white; text-decoration: none;">joydeep@example.com</a></p>
+    </footer>
+
 </body>
+
 </html>
