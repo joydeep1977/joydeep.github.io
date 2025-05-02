@@ -161,12 +161,9 @@
     <div class="section about" id="about">
         <h2>About Joydeep</h2>
         <p>
-            Joydeep Das is a results-driven Technical Product/Project Management professional with 20+ years of experience in leading cross-functional teams
-            and overseeing complex data storage and compute platform hardware and systems software engineering projects. He has a strong 
+            Joydeep Das is a results-driven Technical Product/Project Management professional with 20+ years of experience in leading cross-functional teams and overseeing complex data storage and compute platform hardware and systems software engineering projects. He has a strong 
             background in technical project and product management, engineering development and product validation.
-
-            Apart from his full time work, Joydeep regularly perticipate in various technical conferences as judge and panel peaker. Joydeep has also published
-            various technical scholarly articles in open access over the course of his professional career.
+            Apart from his full time work, Joydeep regularly perticipate in various technical conferences as judge and panel peaker. Joydeep has also published various technical scholarly articles in open access over the course of his professional career.
         </p>
     </div>
 
@@ -183,16 +180,16 @@
     <div class="section achievements" id="achievements">
         <h2>Achievements</h2>
         <div class="achievement-item">
-            <img src="/joydeep.github.io/docs/assets/Images/Joydeep_Resume.jpg" alt="Achievement 1" class="achievement-image">
-            <p>Joydeep Resume. <a href="/joydeep.github.io/docs/assets/Awards/Joydeep_Das.pdf">View PDF</a></p>
+            <img src="/joydeep.github.io/docs/assets/Images/Joydeep_Resume.jpg" alt="Achievement 1" class="achievement-image" onclick="openModal('/joydeep.github.io/docs/assets/Images/Joydeep_Resume.jpg')">
+            <p>Joydeep Resume. <a href="/joydeep.github.io/docs/assets/Awards/Joydeep_Das.pdf">Read More</a></p>
         </div>
         <div class="achievement-item">
-            <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image">
-            <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">View PDF</a></p>
+            <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image" onclick="openModal('path-to-achievement-image2.jpg')">
+            <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">Read More</a></p>
         </div>
         <div class="achievement-item">
-            <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image">
-            <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">View PDF</a></p>
+            <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image" onclick="openModal('path-to-achievement-image3.jpg')">
+            <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">Read More</a></p>
         </div>
     </div>
 
@@ -203,10 +200,29 @@
         </div>
     </div>
 
+    <!-- Modal for displaying expanded images -->
+    <div class="modal" id="imageModal" onclick="closeModal(event)">
+        <img id="modalImage" src="" alt="Expanded Image">
+    </div>
+
     <footer>
-        <p>© 2023 Joydeep Das. All rights reserved.</p>
-        <p>Contact: <a href="mailto:joydeep1977@gmail.com" style="color: white; text-decoration: none;">joydeep@example.com</a></p>
+        <p>© 2025 Joydeep Das. All rights reserved.</p>
+        <p>Contact: <a href="mailto:joydeep1977@gmail.com" style="color: white; text-decoration: none;">Email Joydeep Here</a></p>
     </footer>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("imageModal").style.display = "flex"; // Show modal
+        }
+
+        function closeModal(event) {
+            if (event.target === document.getElementById("imageModal")) {
+                document.getElementById("imageModal").style.display = "none"; // Hide modal
+            }
+        }
+
+    </script>
 
 </body>
 
