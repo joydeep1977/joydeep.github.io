@@ -109,6 +109,26 @@
             height: auto;
             border-radius: 5px;
             margin-bottom: 10px;
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+            justify-content: center; /* Center the modal */
+            align-items: center; /* Center the modal */
+        }
+
+        .modal img {
+            max-width: 90%; /* Limit image size */
+            max-height: 90%; /* Limit image size */
+            border-radius: 5px;
         }
 
         .contact {
@@ -161,9 +181,10 @@
     <div class="section about" id="about">
         <h2>About Joydeep</h2>
         <p>
-            Joydeep Das is a results-driven Technical Product/Project Management professional with 20+ years of experience in leading cross-functional teams and overseeing complex data storage and compute platform hardware and systems software engineering projects. He has a strong 
-            background in technical project and product management, engineering development and product validation.
-            Apart from his full time work, Joydeep regularly perticipate in various technical conferences as judge and panel peaker. Joydeep has also published various technical scholarly articles in open access over the course of his professional career.
+            Joydeep Das is a highly skilled web developer with extensive experience in creating robust and user-centric web applications. With a background in computer science and a passion for technology, Joydeep specializes in both front-end and back-end development. He is proficient in various programming languages and frameworks, including JavaScript, HTML, CSS, React, Node.js, and Python.
+        </p>
+        <p>
+            Beyond his technical abilities, Joydeep believes in the power of continuous learning and enjoys exploring new technologies that can improve his projects. Apart from coding, he is an avid traveler and loves photography, often combining his travels with his passion for web development by documenting his adventures online.
         </p>
     </div>
 
@@ -181,15 +202,15 @@
         <h2>Achievements</h2>
         <div class="achievement-item">
             <img src="/joydeep.github.io/docs/assets/Images/Joydeep_Resume.jpg" alt="Achievement 1" class="achievement-image" onclick="openModal('/joydeep.github.io/docs/assets/Images/Joydeep_Resume.jpg')">
-            <p>Joydeep Resume. <a href="/joydeep.github.io/docs/assets/Awards/Joydeep_Das.pdf">Read More</a></p>
+            <p>Joydeep's Resume. <a href="/joydeep.github.io/docs/assets/Awards/Joydeep_Das.pdf">Read More</a></p>
         </div>
         <div class="achievement-item">
             <img src="path-to-achievement-image2.jpg" alt="Achievement 2" class="achievement-image" onclick="openModal('path-to-achievement-image2.jpg')">
-            <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">Read More</a></p>
+            <p>Achievement 2: Description of the second achievement. <a href="link-to-pdf2.pdf">View PDF</a></p>
         </div>
         <div class="achievement-item">
             <img src="path-to-achievement-image3.jpg" alt="Achievement 3" class="achievement-image" onclick="openModal('path-to-achievement-image3.jpg')">
-            <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">Read More</a></p>
+            <p>Achievement 3: Description of the third achievement. <a href="link-to-pdf3.pdf">View PDF</a></p>
         </div>
     </div>
 
@@ -207,7 +228,7 @@
 
     <footer>
         <p>© 2025 Joydeep Das. All rights reserved.</p>
-        <p>Contact: <a href="mailto:joydeep1977@gmail.com" style="color: white; text-decoration: none;">Email Joydeep Here</a></p>
+        <p>Contact: <a href="mailto:joydeep1977@gmail.com" style="color: white; text-decoration: none;">E-Mail Joydeep Here</a></p>
     </footer>
 
     <script>
@@ -221,9 +242,7 @@
                 document.getElementById("imageModal").style.display = "none"; // Hide modal
             }
         }
-
     </script>
 
 </body>
-
 </html>
